@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.4.2/dist/handsontable.full.min.js"></script>
+    <script src="cookie.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/handsontable@7.4.2/dist/handsontable.full.min.css" rel="stylesheet"
+          media="screen">
+    <style>
+        body {
+            font-family: -apple-system, sans-serif;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div id="cookie-table" style="width: 500px; height: 400px; overflow: hidden"></div>
+<div id="cookie-table2"></div>
+<script>
+    let data = [
+        [".walmart.com", "__cfduid", "d8462dc1860c0aef856d5df7f73ef87331596180170"],
+        [".walmart.com", "__gads", "ID=36db5d15c5d9332f:T=1596180170:S=ALNI_ManJfwDMNzkV66Qt4bu2YL8dvOX9A"],
+        [".walmart.com", "_fbp", "fb.1.1596180168789.1369484526"]
+    ];
+
+    let container = document.getElementById('cookie-table');
+    var hot = new Handsontable(container, {
+        data: data,
+        colHeaders: ['Domain', 'Name', 'Value'],
+        filters: true,
+        contextMenu: true,
+        // dropdownMenu: true,
+        licenseKey: 'non-commercial-and-evaluation'
+    });
+</script>
+<script>
+    let data2 = [
+        {
+            domain: ".walmart.com",
+            name: "__cfduid",
+            value: "d8462dc1860c0aef856d5df7f73ef87331596180170"
+        },
+        {
+            domain: ".walmart.com",
+            name: "__gads",
+            value: "ID=36db5d15c5d9332f:T=1596180170:S=ALNI_ManJfwDMNzkV66Qt4bu2YL8dvOX9A"
+        },
+        {
+            domain: ".walmart.com",
+            name: "_fbp",
+            value: "fb.1.1596180168789.1369484526"
+        }
+    ]
+</script>
+</body>
+</html>

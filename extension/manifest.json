@@ -1,0 +1,32 @@
+{
+  "name": "Cookie Helper",
+  "description": "A Cookie Helper for developers to easily manage cookies",
+  "version": "0.1",
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "*"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "lib/jquery-3.4.1.min.js",
+        "content.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_title": "Cookie Helper"
+  },
+  "permissions": [ "tabs", "\u003Call_urls>", "cookies", "contextMenus", "unlimitedStorage", "notifications", "storage", "clipboardWrite" ]
+}

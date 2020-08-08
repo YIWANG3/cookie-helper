@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Env Switch </title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script src="popup.js"></script>
+    <script src="lib/cookie.js"></script>
+    <script src="utils/cookie_helpers.js"></script>
+    <script src="lib/handsontable.full.min.js"></script>
+    <script src="lib/dateFormat.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/handsontable@7.4.2/dist/handsontable.full.min.css" rel="stylesheet"
+          media="screen">
+</head>
+
+<body>
+<div class="section log">
+    <div class="section-content">
+        <div id="log">
+        </div>
+    </div>
+</div>
+
+<div class="section cookies">
+    <div class="section-title">Cookie Table</div>
+    <div class="section-content cookies-container">
+        <input id="cookie-search-input" type="search" placeholder="Search">
+        <div class="cookies-list" id="cookieTable"></div>
+    </div>
+</div>
+<div class="section app-info">
+    <div class="section-title">Quick Set</div>
+    <div class="section-content">
+        <textarea class="quick-set-content common-input" id="quick-set-content" type="text" placeholder=""></textarea>
+        <button class="quick-set-btn" id="quick-set-btn">Set</button>
+    </div>
+</div>
+<div class="section app-info">
+    <div class="section-title">URL</div>
+    <div class="section-content">
+        <div id="cookieSearchCondition">
+            <input class="searchCondition common-input" type="text" placeholder="">
+        </div>
+    </div>
+</div>
+<div class="section cookies">
+    <div class="section-title">Cookies</div>
+    <div class="section-content">
+        <div class="cookies-container">
+            <div class="cookies-list" id="cookiesList"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
